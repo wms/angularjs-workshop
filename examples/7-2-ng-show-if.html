@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>AngularJS Workshop &middot; Basic Directives &middot; ng-show and ng-if</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    </head>
+    <body ng-app="MyApp">
+        <div class="container">
+            <h1 class="page-header">AngularJS Workshop &middot; Basic Directives &middot; ng-show and ng-if</h1>
+
+            <div ng-controller="PenController">
+                <p>The pen is...</p>
+                <input type="text" class="form-control" ng-model="pen.colour">
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2 class="page-header">ng-show</h2>
+                        <p ng-show="pen.colour == 'red'">The pen is red!</p>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <h2 class="page-header">ng-if</h2>
+                        <p ng-if="pen.colour == 'blue'">The pen is blue!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="/lib/angular/angular.js"></script>
+        <script src="js/7-2-ng-show-if.js"></script>
+    </body>
+</html>

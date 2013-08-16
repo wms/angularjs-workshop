@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>AngularJS Workshop &middot; Basic Directives &middot; ng-repeat</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    </head>
+    <body ng-app="MyApp">
+        <div class="container">
+            <h1 class="page-header">AngularJS Workshop &middot; Basic Directives &middot; ng-repeat</h1>
+
+            <div ng-controller="CarController">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div ng-repeat="car in cars" class="well">
+                            {{ car.colour }} {{ car.make }}
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 form-horizontal">
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">Colour</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" ng-model="newCar.colour">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 control-label">Make</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" ng-model="newCar.make">
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary pull-right" ng-click="addCar()">Add Car</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="/lib/angular/angular.js"></script>
+        <script src="js/7-3-ng-repeat.js"></script>
+    </body>
+</html>
