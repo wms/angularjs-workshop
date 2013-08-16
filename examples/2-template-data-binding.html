@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>AngularJS Workshop &middot; Data Binding</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    </head>
+    <body ng-app>
+        <div class="container">
+            <h1 class="page-header">AngularJS Workshop &middot; Data Binding</h1>
+
+            <h2>Two-way binding with <em>ng-model</em></h2>
+
+            <div class="form-group">
+                <p>Hello {{ name }}</p>
+                <input type="text" class="form-control" ng-model="name">
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="alertClass">
+            </div>
+
+            <p class="alert alert-{{alertClass}}">Check this out!</p>
+        </div>
+
+        <script src="/lib/angular/angular.js"></script>
+    </body>
+</html>
