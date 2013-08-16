@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>AngularJS Workshop &middot; Namespaces</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    </head>
+    <body ng-app="MyApp">
+        <div class="container">
+            <h1 class="page-header">AngularJS Workshop &middot; Namespaces</h1>
+
+            <div ng-controller="PersonController">
+                <p>{{ person.name }} is {{ person.age }} years old</p>
+
+                <button class="btn" ng-click="birthday()">Get older</button>
+            </div>
+        </div>
+
+        <script src="/lib/angular/angular.js"></script>
+        <script src="js/namespaces.js"></script>
+    </body>
+</html>
