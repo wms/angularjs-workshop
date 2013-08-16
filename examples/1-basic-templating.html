@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>AngularJS Workshop &middot; Basic Templating</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    </head>
+    <body ng-app>
+        <div class="container">
+            <h1 class="page-header">AngularJS Workshop &middot; Basic Templating</h1>
+
+            <h2>These expressions work...</h2>
+            <p>{{ 2 + 2 }}</p>
+            <p>{{ 'Hello'.toUpperCase() }}</p>
+            <p>Hello {{ 'World' }}!</p>
+
+            <h2>This expression won't...</h2>
+            <p>{{ console.debug('hello') }}</p>
+            <p>...because `window` is not available in the context the
+            template is executed in</p>
+
+            <p class="alert alert-{{ 'success' }}">
+                Templates can be used in element attributes as well as
+                content!
+            </p>
+        </div>
+
+        <script src="/lib/angular/angular.js"></script>
+    </body>
+</html>
