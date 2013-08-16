@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>AngularJS Workshop &middot; Scope Inheritance</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    </head>
+    <body ng-app>
+        <div class="container">
+            <h1 class="page-header">AngularJS Workshop &middot; Scope Inheritance</h1>
+
+            <h2>Bad Parenting</h2>
+            <div class="well" ng-controller="BadParentController">
+                <p>Parent says: Hello {{name}}!</p>
+
+                <div class="form-group">
+                    <input class="form-control" type="input" ng-model="name">
+                </div>
+
+                <div class="well" ng-controller="ChildController">
+                    <p>Child says: Hello {{name}}!</p>
+
+                    <div class="form-group">
+                        <input class="form-control" type="input" ng-model="name">
+                    </div>
+                </div>
+            </div>
+
+            <h2>Good Parenting</h2>
+            <div class="well" ng-controller="GoodParentController">
+                <p>Parent says: Hello {{person.name}}!</p>
+
+                <div class="form-group">
+                    <input class="form-control" type="input" ng-model="person.name">
+                </div>
+
+                <div class="well" ng-controller="ChildController">
+                    <p>Child says: Hello {{person.name}}!</p>
+
+                    <div class="form-group">
+                        <input class="form-control" type="input" ng-model="person.name">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            BadParentController = function($scope) {
+                $scope.name = "Warren";
+            };
+
+            GoodParentController = function($scope) {
+                $scope.person = {
+                    name: "Warren"
+                };
+            }
+
+            ChildController = function($scope) {
+            }
+        </script>
+
+        <script src="/lib/angular/angular.js"></script>
+    </body>
+</html>

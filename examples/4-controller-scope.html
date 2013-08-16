@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>AngularJS Workshop &middot; Controller Scope</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    </head>
+    <body ng-app>
+        <div class="container">
+            <h1 class="page-header">AngularJS Workshop &middot; Controller Scope</h1>
+
+            <div ng-controller="MyController">
+                <p>Hello {{name}}!</p>
+
+                <div class="form-group">
+                    <input class="form-control" type="input" ng-model="name">
+                </div>
+
+                <button class="btn" ng-click="doSomething()">Do something...</button>
+            </div>
+        </div>
+
+        <script>
+            MyController = function($scope) {
+                $scope.name = "Warren";
+                $scope.number = 1;
+
+                $scope.doSomething = function() {
+                    window.alert("You're number " + $scope.number + "!");
+                    $scope.number += 1;
+                };
+            };
+        </script>
+
+        <script src="/lib/angular/angular.js"></script>
+    </body>
+</html>
