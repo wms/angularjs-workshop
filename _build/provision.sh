@@ -2,9 +2,10 @@
 
 cp /vagrant/_build/sources.list /etc/apt/sources.list.d/
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A6D3315B
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C7917B12
 
 apt-get update
-apt-get install -y apache2 couchdb curl
+apt-get install -y apache2 couchdb curl nodejs
 rm -rf /var/www
 ln -fs /vagrant /var/www
 cp /vagrant/_build/couchdb/local.ini /etc/couchdb/

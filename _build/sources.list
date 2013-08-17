@@ -1,1 +1,2 @@
 deb http://ppa.launchpad.net/nilya/couchdb-1.3/ubuntu precise main
+deb http://ppa.launchpad.net/chris-lea/node.js/ubuntu precise main
