@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>AngularJS Workshop &middot; Isolate Scope</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    </head>
+    <body ng-app="MyApp">
+        <div class="container">
+            <h1 class="page-header">AngularJS Workshop &middot; Isolate Scope</h1>
+
+            <div ng-controller="CarsController">
+                <div class="well" ng-repeat="car in cars">
+                    {{car.colour}}
+                    {{car.make}}
+                </div>
+
+                <p>There are {{ total }} cars in the database</p>
+
+                <div my-button-group collection="cars"></div>
+            </div>
+        </div>
+
+        <script src="/lib/angular/angular.js"></script>
+        <script src="js/11-isolate-scope.js"></script>
+    </body>
+</html>
