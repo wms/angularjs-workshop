@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>AngularJS Workshop &middot; Advanced Directive</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    </head>
+    <body ng-app="MyApp">
+        <div class="container">
+            <h1 class="page-header">AngularJS Workshop &middot; Advanced Directive</h1>
+
+            <div ng-controller="CarsController">
+                <div class="well" ng-repeat="car in cars">
+                    {{car.colour}}
+                    {{car.make}}
+                </div>
+
+                <div my-button-group></div>
+            </div>
+        </div>
+
+        <script src="/lib/angular/angular.js"></script>
+        <script src="js/10-advanced-directive.js"></script>
+    </body>
+</html>
