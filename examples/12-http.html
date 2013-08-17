@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>AngularJS Workshop &middot; $http</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    </head>
+    <body ng-app="MyApp">
+        <div class="container">
+            <h1 class="page-header">AngularJS Workshop &middot; $http</h1>
+
+            <div ng-controller="HttpController">
+                <p><strong>Response Data:</strong> {{ response }}</p>
+
+                <p>{{ prefix }} <input type="text" class="form-control" ng-model="url"></p>
+
+                <button class="btn" ng-click="get()">GET</button>
+            </div>
+        </div>
+
+        <script src="/lib/angular/angular.js"></script>
+        <script src="js/12-http.js"></script>
+    </body>
+</html>
