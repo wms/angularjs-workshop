@@ -17,5 +17,5 @@ angular.module('MyApp', [])
                     height: '20px'
                 });
             });
-        }
+        };
     });
